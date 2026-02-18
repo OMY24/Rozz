@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rozz Lyn Estuaria – Portfolio</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Georgia', serif;
+    background: #fff5f5;
+    color: #3a2a2a;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffffff' fill-opacity='0.2' d='M12 21.6C5.4 16.8 2 13.2 2 9.5 2 6.4 4.4 4 7.5 4c1.7 0 3.3.8 4.5 2.1C13.2 4.8 14.8 4 16.5 4 19.6 4 22 6.4 22 9.5c0 3.7-3.4 7.3-10 12.1z'/%3E%3C/svg%3E");
+    background-size: 120px 120px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body > * { position: relative; z-index: 1; }
+
+
+
+  .hero {
+    text-align: center;
+    padding: 3rem 2rem 2.5rem;
+  }
+  .hero h1 { font-size: 3rem; font-weight: 400; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+  .hero p { font-size: 1.05rem; color: #a07070; margin-bottom: 2.5rem; font-style: italic; }
+
+  .btn-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #c07070;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.8rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-linkedin:hover { background: #a05858; transform: translateY(-2px); }
+  .btn-linkedin svg { width: 16px; height: 16px; fill: white; }
+
+  .divider { width: 60px; height: 1px; background: #f5c6c6; margin: 0 auto 2rem; }
+
+  section { max-width: 100%; margin: 0 auto; padding: 0 5rem 2.5rem; }
+
+  section h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c07070;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .exp-item {
+    border-left: 2px solid #f5c6c6;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .exp-item .role { font-size: 1rem; font-weight: 600; margin-bottom: 0.2rem; }
+  .exp-item .company { font-size: 0.9rem; color: #c07070; margin-bottom: 0.2rem; }
+  .exp-item .dates { font-size: 0.78rem; color: #b09090; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+  .exp-item ul { padding-left: 1rem; }
+  .exp-item ul li {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: #5a4040;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Tools */
+  .tools-grid { display: flex; flex-direction: column; gap: 1.2rem; }
+  .tool-category { }
+  .tool-category .cat-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a07070;
+    margin-bottom: 0.6rem;
+    font-family: 'Georgia', serif;
+  }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tool-tag {
+    background: #fff0f0;
+    border: 1px solid #f5c6c6;
+    color: #7a4a4a;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+  }
+  .tool-tag:hover { background: #f5c6c6; }
+
+  /* Education badges */
+  .badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem; }
+  .badge {
+    background: #fff0f0;
+    border: 1px solid #f5c6c6;
+    color: #7a4a4a;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.78rem;
+    color: #c0a0a0;
+    border-top: 1px solid #f5c6c6;
+    letter-spacing: 0.08em;
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>Rozz Lyn Estuaria</h1>
+  <p>Quality Assurance Engineer &nbsp;·&nbsp; Philippines</p>
+  <a class="btn-linkedin" href="https://www.linkedin.com/in/rse24/" target="_blank">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+    LinkedIn
+  </a>
+</div>
+
+<div class="divider"></div>
+
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
+  <div style="text-align:center; max-width:100%; margin:0 auto;">
+    <div style="width:32px;height:32px;border-radius:50%;background:#f5c6c6;margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center;font-size:0.95rem;color:#c07070;">✿</div>
+    <p style="font-size:0.93rem;line-height:1.9;color:#5a4040;font-style:italic;">
+      Detail-oriented and results-driven Quality Assurance Analyst with five years of experience in manual testing for both B2B and B2C eCommerce platforms. Experienced in testing AI-powered, intelligent document processing platforms leveraging machine learning, as well as command-line interfaces. Skilled in developing comprehensive test plans, identifying software defects, and collaborating with cross-functional teams throughout the software development lifecycle. Recognized for a strong work ethic, leadership, and adaptability in fast-paced environments. Passionate about continuous learning and eager to tackle new challenges while driving quality excellence.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Experience -->
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="exp-item">
+    <div class="role">Quality Assurance Analyst</div>
+    <div class="company">ConnectOS</div>
+    <div class="dates">October 2023 – Present</div>
+    <ul>
+      <li>Part of a QA team supporting a US-based software company.</li>
+      <li>Conducting QA for an AI-powered document processing platform that uses machine learning to classify, extract, and validate data, automatically matching documents to thousands of types while continuously improving accuracy.</li>
+      <li>Testing command-line interfaces (CLIs).</li>
+      <li>Create and manage test plans and manual test cases using Azure DevOps.</li>
+      <li>Collaborate with cross-functional teams to ensure product quality across the SDLC.</li>
+      <li>Identify bugs and assist in troubleshooting with the development team.</li>
+      <li>Conduct feature demos for clients and stakeholders.</li>
+      <li>Support QA activities for each release cycle.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="role">Quality Assurance Engineer</div>
+    <div class="company">Accenture, Inc.</div>
+    <div class="dates">March 2021 – October 2023</div>
+    <ul>
+      <li>Developed test strategies, scenarios, and test scripts from system specifications.</li>
+      <li>Executed manual tests; logged results, reported defects, and worked on defect resolution.</li>
+      <li>Performed multiple testing types: regression, performance, smoke, sanity, UI, and compatibility.</li>
+      <li>Conducted testing in SIT and UAT phases.</li>
+      <li>Specialized in Hybris Testing: configured data in back office for test scenarios (e.g., pricing, promotions, stock level).</li>
+      <li>Performed end-to-end testing for B2B and B2C eCommerce websites.</li>
+      <li>Collaborated with both onshore and offshore teams for product demos and QA support.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Tools -->
+<section id="tools">
+  <h2>Tools &amp; Skills</h2>
+  <div class="tools-grid">
+    <div class="tool-category">
+      <div class="cat-label">Testing Tools</div>
+      <div class="tag-row">
+        <span class="tool-tag">Jira</span>
+        <span class="tool-tag">Postman</span>
+        <span class="tool-tag">Zephyr</span>
+        <span class="tool-tag">Azure DevOps</span>
+        <span class="tool-tag">Saucelabs</span>
+        <span class="tool-tag">Browserstack</span>
+        <span class="tool-tag">Python</span>
+      </div>
+    </div>
+    <div class="tool-category">
+      <div class="cat-label">Platforms &amp; Systems</div>
+      <div class="tag-row">
+        <span class="tool-tag">SAP Hybris Back Office</span>
+        <span class="tool-tag">AEM</span>
+        <span class="tool-tag">Figma</span>
+        <span class="tool-tag">HAC</span>
+        <span class="tool-tag">VDI</span>
+        <span class="tool-tag">Amazon WorkSpaces</span>
+        <span class="tool-tag">Document Processing</span>
+      </div>
+    </div>
+    <div class="tool-category">
+      <div class="cat-label">Monitoring &amp; Analytics</div>
+      <div class="tag-row">
+        <span class="tool-tag">Kibana</span>
+        <span class="tool-tag">Datadog</span>
+        <span class="tool-tag">Splunk</span>
+      </div>
+    </div>
+    <div class="tool-category">
+      <div class="cat-label">Communication &amp; Collaboration</div>
+      <div class="tag-row">
+        <span class="tool-tag">Microsoft Teams</span>
+        <span class="tool-tag">Slack</span>
+        <span class="tool-tag">Confluence</span>
+      </div>
+    </div>
+    <div class="tool-category">
+      <div class="cat-label">Testing Types</div>
+      <div class="tag-row">
+        <span class="tool-tag">CLI Testing</span>
+        <span class="tool-tag">Regression Testing</span>
+        <span class="tool-tag">UAT</span>
+        <span class="tool-tag">SIT</span>
+        <span class="tool-tag">Smoke Testing</span>
+        <span class="tool-tag">Sanity Testing</span>
+        <span class="tool-tag">UI Testing</span>
+        <span class="tool-tag">Compatibility Testing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Education & Certifications -->
+<section id="education">
+  <h2>Education</h2>
+  <div class="exp-item" style="margin-bottom:2.5rem;">
+    <div class="role">Bulacan State University</div>
+    <div class="company">Bachelor of Industrial Technology major in Computer Technology</div>
+    <div class="badge-row">
+      <span class="badge">🏅 Dean's Lister</span>
+      <span class="badge">🏆 President's Lister</span>
+    </div>
+  </div>
+
+  <h2>Certifications &amp; Achievements</h2>
+  <div class="exp-item">
+    <div class="role">Civil Service Exam Passer</div>
+    <div class="company">Professional Level</div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Rozz Lyn Estuaria
+</footer>
+
+</body>
+</html>
